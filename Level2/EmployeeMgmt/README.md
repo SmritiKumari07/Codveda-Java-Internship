@@ -1,6 +1,7 @@
 import java.util.*;
 
 class Employee {
+
     int id;
     String name, department;
 
@@ -17,6 +18,7 @@ class Employee {
 
 public class EmployeeManagement {
     public static void main(String[] args) {
+    
         System.out.println("Task 2 of Level 2 By Smriti Kumari ");
         Scanner sc = new Scanner(System.in);
         ArrayList<Employee> employees = new ArrayList<>();
