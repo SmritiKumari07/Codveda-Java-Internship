@@ -1,35 +1,24 @@
-import java.util.Scanner;
+# Level 1 - Java Internship Tasks (Codveda)
 
-public class Calculator {
-    public static void main(String[] args) {
-    
-        System.out.println("Task 1 By Smriti Kumari");
-        Scanner sc = new Scanner(System.in);
+This folder contains the **Level 1 (Basic)** tasks for my Java Internship with **Codveda Technologies**.  
+I have completed the following two tasks:
 
-        System.out.println("Enter first number: ");
-        double a = sc.nextDouble();
-        System.out.println("Enter operator (Choose any of them +, -, *, /): ");
-        char op = sc.next().charAt(0);
-        System.out.println("Enter second number: ");
-        double b = sc.nextDouble();
+1. **Basic Calculator**  
+2. **Simple Number Guessing Game**
 
-        double result = 0;
-        switch(op) {
-            case '+': result = a + b;
-            break;
-            case '-': result = a - b;
-            break;
-            case '*': result = a * b;
-            break;
-            case '/': 
-                if (b != 0) result = a / b;
-                else System.out.println("Error: Division by zero!");
-                break;
-            default: 
-                System.out.println("Invalid operator!");
-        }
+---
 
-        System.out.println("Result of the given numbers: " + result);
-        sc.close();
-    }
-}
+# Task 1: Basic Calculator
+A simple Java console application that performs basic arithmetic operations.
+
+# Features
+- Supports **Addition, Subtraction, Multiplication, and Division**
+- Handles **division by zero** gracefully
+- Menu-driven console interface
+- Input validation for invalid numbers
+
+# Run Instructions
+```bash
+javac BasicCalculator.java
+java BasicCalculator
+
