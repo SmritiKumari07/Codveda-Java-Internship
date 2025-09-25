@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS codveda_library;
+USE codveda_library;
+
+CREATE TABLE IF NOT EXISTS books (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  author VARCHAR(255),
+  total_copies INT DEFAULT 1,
+  available_copies INT DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS transactions (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  book_id INT NOT NULL,
+  borrower VARCHAR(255),
+  action ENUM('BORROW','RETURN') NOT NULL,
+  action_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (book_id) REFERENCES books(id)
+);
