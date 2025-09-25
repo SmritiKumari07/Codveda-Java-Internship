@@ -10,7 +10,7 @@ public class GuessingGame {
         final int MAX_ATTEMPTS = 7;
         final int MIN = 1;
         final int MAX = 100;
-
+        System.out.printf("Task 2 of level 1 accomplished by Smriti Kumari");
         int secret = random.nextInt(MAX - MIN + 1) + MIN;
         System.out.printf("Guess the number:", MIN, MAX, MAX_ATTEMPTS);
 
@@ -48,7 +48,6 @@ public class GuessingGame {
 
         if (!won) {
             System.out.printf("Sorry! You ran out of attempts.The number was %d.%n", secret);
-          System.out.printf("Task 2 of level 1 accomplished by Smriti Kumari");
         }
         sc.close();
     }
