@@ -1,22 +1,40 @@
-# Level 1 - Java Internship Tasks (Codveda)
+# Task 2 - Simple Number Guessing Game (Level 1)
 
-This folder contains the **Level 1 (Basic)** tasks for my Java Internship with **Codveda Technologies**.  
-The tasks demonstrate fundamental concepts of Java such as input handling, loops, conditionals, exception handling, and the use of the Random class.
+This project is part of my **Java Internship with Codveda Technologies**.  
+It is a console-based **Number Guessing Game** implemented in Java.
 
 ---
 
-##  Task 1: Basic Calculator
-**Description:**  
-A simple Java console application that performs **basic arithmetic operations**: addition, subtraction, multiplication, and division.
+## Description
+- The program generates a random number between **1 and 100**.  
+- The player has **7 attempts** to guess the number.  
+- After each guess, the program gives feedback:
+  - `"Too high"` → if the guess is greater than the number.  
+  - `"Too low"` → if the guess is smaller than the number.  
+  - `"Correct!"` → if the guess matches the number.  
+- Handles **invalid inputs** and ensures only valid integers within the range are accepted.  
 
-**Features:**
-- Methods for each operation (add, subtract, multiply, divide).
-- Handles **division by zero** using exception handling.
-- Menu-driven console interface.
-- Input validation for invalid numbers.
+---
 
-**How to Run:**
-```bash
+##  Skills Covered
+- Random number generation using `Random` class  
+- Loops and conditionals in Java  
+- User input handling with `Scanner`  
+- Exception handling for invalid inputs  
+
+---
+
+## Files Included
+- `GuessingGame.java` → Source code  
+- `README.md` (this file)
+
+---
+
+## How to Run
+1. Compile the program:
+   ```bash
+   javac GuessingGame.java
+
 javac BasicCalculator.java
 java BasicCalculator
 
