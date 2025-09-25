@@ -115,9 +115,7 @@ public class LibraryManagementJDBC {
         try {
             System.out.print("Enter book ID to return: "); int id = Integer.parseInt(sc.nextLine().trim());
             System.out.print("Returner name: "); String borrower = sc.nextLine();
-
             conn.setAutoCommit(false);
-            // increment available
             String upd = "UPDATE books SET available_copies = available_copies + 1 WHERE id = ?";
             try (PreparedStatement updPs = conn.prepareStatement(upd)) {
                 updPs.setInt(1, id);
@@ -129,7 +127,6 @@ public class LibraryManagementJDBC {
                     return;
                 }
             }
-            // record transaction
             String insTrans = "INSERT INTO transactions (book_id, borrower, action) VALUES (?, ?, 'RETURN')";
             try (PreparedStatement tps = conn.prepareStatement(insTrans)) {
                 tps.setInt(1, id);
