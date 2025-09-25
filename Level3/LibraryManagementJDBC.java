@@ -7,6 +7,7 @@ public class LibraryManagementJDBC {
     private static final String PASS = "password";
 
     public static void main(String[] args) {
+        System.out.println("Task 2 of Level 3 accomplished by Smriti Kumari");
         try (Connection conn = DriverManager.getConnection(URL, USER, PASS);
              Scanner sc = new Scanner(System.in)) {
             System.out.println("Connected to DB.");
