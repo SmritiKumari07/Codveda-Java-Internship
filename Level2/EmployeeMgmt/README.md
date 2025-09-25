@@ -1,69 +1,38 @@
-import java.util.*;
+# Task 1 - Employee Management System (Level 2)
 
-class Employee {
+This project is part of my **Java Internship with Codveda Technologies**.  
+It is a simple **Employee Management System** implemented in Java using **Object-Oriented Programming (OOP)** principles.
 
-    int id;
-    String name, department;
+---
 
-    Employee(int id, String name, String department) {
-        this.id = id;
-        this.name = name;
-        this.department = department;
-    }
+##  Description
+The system allows the user to manage employee records with basic **CRUD operations**:
+- **Create** → Add a new employee  
+- **Read** → View all employees or search by ID  
+- **Update** → Modify employee details (name, department, salary)  
+- **Delete** → Remove an employee from the system  
 
-    public String toString() {
-        return id + " | " + name + " | " + department;
-    }
-}
+All records are stored in an in-memory collection (`ArrayList`), so no database is required.
 
-public class EmployeeManagement {
-    public static void main(String[] args) {
-    
-        System.out.println("Task 2 of Level 2 By Smriti Kumari ");
-        Scanner sc = new Scanner(System.in);
-        ArrayList<Employee> employees = new ArrayList<>();
+---
 
-        while (true) {
-            System.out.println("\n-- Employee Management --");
-            System.out.println("1. Add Employee");
-            System.out.println("2. View Employees");
-            System.out.println("3. Remove Employee");
-            System.out.println("4. Exit");
-            int choice = sc.nextInt();
-            sc.nextLine();
+##  Skills Covered
+- Object-Oriented Programming (OOP) concepts in Java  
+- Encapsulation and class design (`Employee` class)  
+- CRUD operations using `ArrayList`  
+- Input validation and exception handling  
+- Console-based menu-driven application  
 
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter ID: ");
-                    int id = sc.nextInt(); sc.nextLine();
-                    System.out.print("Enter Name: ");
-                    String name = sc.nextLine();
-                    System.out.print("Enter Department: ");
-                    String dept = sc.nextLine();
-                    employees.add(new Employee(id, name, dept));
-                    System.out.println("Employee added!");
-                    break;
+---
 
-                case 2:
-                    System.out.println("All Employees:");
-                    for (Employee e : employees) System.out.println(e);
-                    break;
+##  Files Included
+- `Employee.java` → Represents an employee object with fields and methods.  
+- `EmployeeManagementSystem.java` → Main program with menu and CRUD functionality.  
+- `README.md` (this file)
 
-                case 3:
-                    System.out.print("Enter ID to remove: ");
-                    int removedId = sc.nextInt();
-                    employees.removeIf(e -> e.id == removedId);
-                    System.out.println("Removed if existed.");
-                    break;
+---
 
-                case 4:
-                    System.out.println("Exiting...");
-                    sc.close();
-                    return;
-                    
-                default:
-                    System.out.println("Invalid choice!");
-            }
-        }
-    }
-}
+## How to Run
+1. Compile both files:
+   ```bash
+   javac Employee.java EmployeeManagementSystem.java
