@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+
 public class BinarySearchTree {
 
     static class Node {
@@ -12,6 +14,7 @@ public class BinarySearchTree {
 
     public void insert(int key) {
         root = insertRecord(root, key);
+        
     }
 
     private Node insertRecord(Node node, int key) {
